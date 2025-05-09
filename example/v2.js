@@ -51,3 +51,20 @@ callingFakeApi()
   .catch((err) => {
     console.log("some error occured ", err);
   });
+
+const p = callingFakeApi();
+
+p.then((user) => {
+  console.log("this is the first then");
+  return user;
+})
+  .then((user) => {
+    console.log("user is ", user);
+    return user.name;
+  })
+  .then((name) => {
+    console.log("name of the user is ", name);
+  })
+  .catch((err) => {
+    console.log("some error occured ", err);
+  });
