@@ -1,6 +1,6 @@
 const promise = require("../index");
 
-const myPromise = promise.promise_1;
+const myPromise = promise.promise_2;
 
 function fakeApi() {
   const user = {
